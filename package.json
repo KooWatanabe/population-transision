@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
-    "prebuild": "rimraf dist",
-    "build": "webpack --progress --mode production"
+    "start": "webpack-dev-server --config ./webpack.config.js --open",
+    "build": "webpack --config ./webpack.config.js"
   },
   "author": "dev.yakuza@gmail.com",
   "dependencies": {
