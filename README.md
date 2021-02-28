@@ -5,7 +5,7 @@
 .env.localの'RESAS_API_KEY'に用意したAPIKEYを貼り付ける
 ```
 ※ [API取得場所](https://opendata.resas-portal.go.jp/)
-### 実行コマンド
+### node_modules インストール
 ```sh
 yarn
 ```
