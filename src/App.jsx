@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import ResasApi from './api/resas';
-
-import './sass/style.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const [prefs, setplefs] = useState([]);
@@ -157,4 +153,4 @@ const App = () => {
     </div>
   );
 };
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;

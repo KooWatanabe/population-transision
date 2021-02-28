@@ -2,7 +2,7 @@
     "presets": [
       [
         "@babel/preset-env",
-        { "targets": { "browsers": ["last 2 versions", ">= 5% in JP"] } }
+        { "targets": {"node": "current"} }
       ],
       "@babel/react"
     ]
