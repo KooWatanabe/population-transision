@@ -1,0 +1,29 @@
+.btn_wrap{
+    display:inline-block;
+    position: relative;
+}
+.btn_wrap input{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+}
+.btn_wrap label{
+    font-size: small;
+    width: 7rem;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: #eee;
+    display: inline-block;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn_wrap label:hover,
+.btn_wrap input:checked + label{
+    background: #2711a5;
+    color: #FFF;
+}
+.btn_wrap input:focus + label{
+    box-shadow: 0 0 4px #2711a5;
+}
