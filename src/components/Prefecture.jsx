@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ResasApi from '../api/resas';
 
 const App = (props) => {
-  const [prefs, setplefs] = useState([]);
+  const [prefs, setPlefs] = useState([]);
   const [checkedPrefs, setCheckedPrefs] = useState({})
   const [error, setError] = useState({})
 
@@ -11,7 +11,7 @@ const App = (props) => {
     const fetchPref = async () => {
       try {
         const response = await ResasApi.pref();
-        setplefs(response.result);
+        setPlefs(await response.result);
       } catch (exception) {
         console.error(exception);
         if (exception.message) {
@@ -39,6 +39,7 @@ const App = (props) => {
       if (Object.keys(props.populations).indexOf(id) == -1) {
         const response = await ResasApi.population(id);
         let tmp = [];
+        console.log(response);
         Object.keys(response.result.data[0].data).forEach(i => {
           tmp.push(response.result.data[0].data[i].value);
           });
@@ -74,7 +75,7 @@ const App = (props) => {
       )
     }
     return (
-      <div className='btn_wrap'>
+      <div className='btn_wrap' key={pref.prefCode}>
         <CheckBox
             pref={pref}
             onChange={handleChange}
